@@ -36,5 +36,9 @@ class Vector2f(var x: Float, var y: Float) {
             val dy = point2.y - point1.y
             return sqrt(dx * dx + dy * dy)
         }
+
+        fun dot(point1: Vector2f, point2: Vector2f): Float {
+            return point1.x * point2.x + point1.y * point2.x
+        }
     }
 }
