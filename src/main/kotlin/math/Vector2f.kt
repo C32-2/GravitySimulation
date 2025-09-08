@@ -29,4 +29,12 @@ class Vector2f(var x: Float, var y: Float) {
         val length = length()
         return Vector2f(x / length, y / length)
     }
+
+    companion object {
+        fun distance(point1: Vector2f, point2: Vector2f): Float {
+            val dx = point2.x - point1.x
+            val dy = point2.y - point1.y
+            return sqrt(dx * dx + dy * dy)
+        }
+    }
 }
