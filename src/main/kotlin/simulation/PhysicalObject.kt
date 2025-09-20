@@ -6,10 +6,12 @@ class PhysicalObject(
     var position: Vector2f,
     var velocity: Vector2f,
     val mass: Float,
-    val children: ArrayList<PhysicalObject>
 ) {
+    val children: ArrayList<PhysicalObject>
+
     init {
         require(mass > 0.0f)
+        children = ArrayList<PhysicalObject>()
     }
 
     fun addChild(physicalObject: PhysicalObject) {
